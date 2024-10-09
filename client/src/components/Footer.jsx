@@ -15,11 +15,14 @@ export default function Footer () {
       <div className="img"><img src={logo} alt='logo'/></div>
       </Link>
       <div className="content">
-      <Link to="/">Home</Link>
+        <div className="content-home">
+        <Link className="login" to="/">Home</Link>
       {currentUser? 
-      <div onClick={logout}>Logout</div>
-           : <Link to="/login">Login</Link>
+      <div className="login"onClick={logout}>Logout</div>
+           : <Link className="login" to="/login">Login</Link>
           }
+        </div>
+      
       <div className="links">
       {categories.map((category) => ( 
                 <Link  to={`/?cat=${category}`} key={category}>

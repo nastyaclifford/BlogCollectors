@@ -3,8 +3,7 @@ import { categories } from "../constants/categories"
 
 export default function Categories ({selectedCategory, onCategoryChange}) {
     return(
-        <div className="item">
-            <h1>Category</h1>
+        <>
             {categories.map((category) => (
                 <div className="post" key={category}>
                     <input
@@ -18,6 +17,6 @@ export default function Categories ({selectedCategory, onCategoryChange}) {
                     <label htmlFor={category}>{category.charAt(0).toUpperCase() + category.slice(1)}</label>
                 </div>
             ))}
-        </div>
+        </>
     )
 }

@@ -115,9 +115,9 @@ console.error("Error:", err.response ? err.response.data : err.message)
             <div className="menu">
 
             <div className="item">
-                <h1>Images</h1>
+               
                 <input style={{display: "none"}} type="file" name=""id="file" multiple onChange={handleFileChange}/>
-                <label className="file" htmlFor="file">Upload Your Images</label>
+                <label className="file" htmlFor="file">Select Images</label>
 
                 <div>
                 {existingImg.length > 0 && existingImg.map((item,index)=>(
@@ -158,24 +158,17 @@ console.error("Error:", err.response ? err.response.data : err.message)
                                 
                     </div>
                 ))}
-
                 </div>
-
-
-
             </div>
-
-
+            <div className="categories">
+                <h1>Post category</h1>
             <Categories selectedCategory={cat}
-                        onCategoryChange={setCat}/>   
-                <div className="item">
-                <h1>Publish</h1>
-                <div className="buttons">
-                    <button onClick={handleClick}>Publish</button>
-                    </div>
-                </div>
+                        onCategoryChange={setCat}/> 
+            </div>
+             
+                
+                    <button className="button-publish" onClick={handleClick}>Publish</button>
 
-        
             </div>
         </div>
     )

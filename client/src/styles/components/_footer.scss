@@ -24,15 +24,21 @@
         .content{
             text-align: center;
 
-            a{
-                text-decoration: none;
-                color: black;
-                font-size: 0.8rem;
-                margin-left: 1rem;
-                line-height: 2;
-                font-weight: bolder;
+            .content-home{
+                display: flex;
+                justify-content: center;
+                .login{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 0.8rem;
+                    margin-left: 1rem;
+                    line-height: 2;
+                    font-weight: bolder;
+                }
+    
             }
 
+            
             .links{
                 display: flex;
                 flex-wrap: wrap;
