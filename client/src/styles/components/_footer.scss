@@ -1,0 +1,62 @@
+@import "../variables";
+
+.container--footer{
+    background-color: $purple;
+    height: 15rem;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+
+    footer{
+        width: 90%;
+        margin: auto;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            height: 5rem;
+            border-radius: 50%;
+            border: 0.2rem solid white;
+        }
+
+        .content{
+            text-align: center;
+
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 0.8rem;
+                margin-left: 1rem;
+                line-height: 2;
+                font-weight: bolder;
+            }
+
+            .links{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+               
+                
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 0.8rem;
+                    margin-left: 1rem;
+                    line-height: 0.1rem;
+                }
+            }
+
+            .author{
+                font-size: 0.8rem;
+                line-height: 1.5;
+            }
+
+            
+        }
+
+        
+    }
+}
+ 

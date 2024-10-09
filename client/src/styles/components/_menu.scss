@@ -1,0 +1,60 @@
+@import "../variables";
+@import "../fonts";
+
+.menu{
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: 1.2rem;
+        color: $light-grey;
+    }
+
+    .posts{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 50% 50%;
+        row-gap: 2.5rem;
+        margin-top: 0.5rem;
+
+        .post{
+            max-width:9rem;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+            width: 100%;
+            height: 100%;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                height:9rem;
+                border-radius: 5%;
+            }
+
+            .content{
+                flex-grow: 1; 
+                .name{
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+                .description{
+                    font-weight: 600;
+                    color: $light-grey;
+                }
+                
+            }
+            button{
+                margin-top: 0.5rem;
+                @include button-read-moreSm;
+            }
+        }
+        .post:hover{
+            transform: scale(1.2); 
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+        
+    }
+    
+}

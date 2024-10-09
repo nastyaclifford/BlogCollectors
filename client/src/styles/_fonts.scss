@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+@mixin button-read-moreSm {
+   background-color: $yellow;
+   border-radius: 0.9rem;
+   border: none;
+   font-size: 1rem;
+   padding: 0.4rem 0.8rem;
+   margin-left: 2rem;
+   &:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+   }
+}
+
+@mixin button-read-moreLg {
+    background-color: $yellow;
+    border-radius: 0.9rem;
+    border: none;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    &:hover{
+     cursor: pointer;
+     transform: scale(1.2);
+    }
+ }
