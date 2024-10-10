@@ -21,6 +21,7 @@ const Post = () => {
     }, [cat]);
 
     if (posts.length === 0) return null;
+    
 
     const latestPost = posts[posts.length - 1];
     const imgArray = latestPost.img ? latestPost.img.split(',') : [];

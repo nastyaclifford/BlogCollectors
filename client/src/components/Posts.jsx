@@ -20,6 +20,7 @@ setPosts(res.data)
             }catch(err) {
                 console.log(err)
             }
+            
         };
         fetchData();
     }, [cat])
