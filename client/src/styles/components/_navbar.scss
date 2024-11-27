@@ -33,7 +33,7 @@
                      line-height: 0.8;
                      color: white;
                      font-stretch: extra-expanded;
-                     -webkit-text-stroke-width: 1.3px;
+                     -webkit-text-stroke-width: 1px;
                      -webkit-text-stroke-color: black;
                  }
             }
@@ -118,44 +118,126 @@ text-decoration: none;
     transform: rotate(-45deg); /* Rotate second line */
 }
 
-        }
+.links{
+    .write{
+        background-color: $yellow;
+        color: black;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.5rem;
+        text-align: center;
 
-        
-        
-
-        .links{
-                .write{
-                    background-color: $yellow;
-                    color: black;
-                    width: 6rem;
-                    height: 6rem;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: 600;
-                    font-style: normal;
-                    font-size: 1.5rem;
-                    text-align: center;
-
-                    &:hover{
-                        color: white;
-                        background-color: $light-pink;
-                        border: 0.2rem solid white;
-                        
-                    }
-            }
-        }
-
-        .logout{
-            margin-top: 2rem;
-            cursor: pointer;
+        &:hover{
+            color: white;
+            background-color: $light-pink;
+            border: 0.2rem solid white;
             
         }
+}
+}
+
+.logout{
+margin-top: 2rem;
+cursor: pointer;
+
+}        
+
+}
+
+
+.navbar-links{
+    display:none;
+}
+        
         
     }
 
    
 
     
+}
+
+@media screen and (min-width: 768px){
+    .navbar{
+        .container{
+            padding: 1rem 0rem;
+            display: flex; 
+            justify-content: space-between;
+            margin: auto;
+            background-color: $orange;
+            
+            .logo{
+                width: 20rem;
+                
+                .link{
+                     .logo-text{
+                        top: 3rem;
+                         font-size: 1.7rem;
+                     }
+                }
+            }
+            
+            .burger-menu {
+                display: none;
+            }
+    
+
+            .navbar-links{
+                display: block;
+                .links-all{
+                    display: flex;                   
+                    align-items: center;
+                    font-size: 1.7rem;
+
+                    a{
+                        text-decoration: none;
+                        
+                    }
+
+                    .links{
+                        .write{
+                            background-color: $yellow;
+                            color: black;
+                            width: 6rem;
+                            height: 6rem;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-size: 1.5rem;
+                            text-align: center;
+        
+                            &:hover{
+                                color: white;
+                                background-color: $light-pink;
+                                border: 0.2rem solid white;
+                                
+                            }
+                    }
+                }
+        
+                .logout{
+                    margin-top: 2rem;
+                    cursor: pointer;
+                    
+                }
+                }
+
+            }
+
+            
+        }
+    
+       
+    
+        
+    }
 }

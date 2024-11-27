@@ -93,6 +93,37 @@ useEffect(()=> {
           }
         </Menu>
         </div>
+
+
+        <div className="navbar-links">
+          <div className="links-all">
+          {currentUser? 
+          <div className="username">Hi, {currentUser?.username }!</div>
+                     : null
+                    }  
+       {categoriesWithPosts.map((category) => ( 
+               <Link  to={`/?cat=${category}`} key={category} onClick={handleLinkClick}>
+               <h5>{category.toUpperCase()}</h5>
+               </Link>
+           ))} 
+
+{currentUser? 
+<div className="links">
+<div className="write">
+   <Link className="link" to="/write" onClick={handleLinkClick}>New post</Link>
+   </div>
+</div>
+          : <span></span>
+         }
+           
+           {currentUser? 
+<div className="logout" onClick={logout} >Logout</div>
+          : <Link className="link" to="/login">Login</Link>
+         }
+          </div>
+       
+       
+       </div>
         
         
       </div>
