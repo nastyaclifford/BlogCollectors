@@ -166,19 +166,14 @@ cursor: pointer;
 @media screen and (min-width: 768px){
     .navbar{
         .container{
-            padding: 1rem 0rem;
             display: flex; 
             justify-content: space-between;
-            margin: auto;
-            background-color: $orange;
+            align-items: center;
             
             .logo{
-                width: 20rem;
-                
                 .link{
                      .logo-text{
                         top: 3rem;
-                         font-size: 1.7rem;
                      }
                 }
             }
@@ -187,48 +182,70 @@ cursor: pointer;
                 display: none;
             }
     
-
             .navbar-links{
                 display: block;
                 .links-all{
-                    display: flex;                   
+                    display: flex;               
                     align-items: center;
-                    font-size: 1.7rem;
+                    font-size: 1.2rem;
+                    gap: 1rem;
 
                     a{
                         text-decoration: none;
-                        
+                        color: $purple;
+                        &:hover{
+                            color: white;
+                      
+                        }
                     }
 
-                    .links{
+                    .links-posts {
+                        display: flex;
+                        gap: 1rem;
+                       
+                    }
+
+                  .links-log{
+                    margin-right: 1rem;
+                    .links-logout{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 0.2rem;
                         .write{
                             background-color: $yellow;
                             color: black;
-                            width: 6rem;
-                            height: 6rem;
+                            width: 4rem;
+                            height: 4rem;
                             border-radius: 50%;
+                            border: 0.22rem solid $yellow;
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             font-weight: 600;
                             font-style: normal;
-                            font-size: 1.5rem;
+                            font-size: 1.1rem;
                             text-align: center;
         
                             &:hover{
                                 color: white;
                                 background-color: $light-pink;
-                                border: 0.2rem solid white;
-                                
+                                border: 0.22rem solid white;
                             }
                     }
-                }
-        
-                .logout{
-                    margin-top: 2rem;
-                    cursor: pointer;
+                        .logout{
+                            color: white;
+                            cursor: pointer;
+                           
+                        }
+                    }
                     
-                }
+                    .login{
+                        color: white;
+                        font-weight: 500;
+                    }
+                  }
+                
                 }
 
             }

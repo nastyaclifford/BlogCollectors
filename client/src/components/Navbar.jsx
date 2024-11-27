@@ -65,8 +65,8 @@ useEffect(()=> {
           </Link>
         </div>
 
+{/*Burger Menu opens for mobile*/}
         <div className="burger-menu" ref={menuRef}>
-       
         <Menu right isOpen={isOpen} onStateChange={({ isOpen }) => setIsOpen(isOpen)}>
         {currentUser? 
            <div className="username">Hi, {currentUser?.username }!</div>
@@ -94,32 +94,29 @@ useEffect(()=> {
         </Menu>
         </div>
 
-
+{/* Regular Menu for desktop */}
         <div className="navbar-links">
           <div className="links-all">
-          {currentUser? 
-          <div className="username">Hi, {currentUser?.username }!</div>
-                     : null
-                    }  
+       <div className="links-posts">
        {categoriesWithPosts.map((category) => ( 
                <Link  to={`/?cat=${category}`} key={category} onClick={handleLinkClick}>
                <h5>{category.toUpperCase()}</h5>
                </Link>
            ))} 
-
-{currentUser? 
-<div className="links">
-<div className="write">
-   <Link className="link" to="/write" onClick={handleLinkClick}>New post</Link>
-   </div>
-</div>
-          : <span></span>
-         }
+       </div>
+       
+      <div className="links-log">
+      {currentUser? 
+          <div className="links-logout">
+          <Link className="write" to="/write" onClick={handleLinkClick}>New post</Link>
+          <div className="username">{currentUser?.username }</div>
+          <div className="logout" onClick={logout} >Logout</div>
+          </div>
            
-           {currentUser? 
-<div className="logout" onClick={logout} >Logout</div>
-          : <Link className="link" to="/login">Login</Link>
+          : <Link className="login" to="/login">Login</Link>
          }
+      </div>
+          
           </div>
        
        
